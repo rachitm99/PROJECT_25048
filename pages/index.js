@@ -1,11 +1,16 @@
 import Head from "next/head";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import AOS  from "aos";
-import { useEffect } from "react";
+import { useEffect ,useRef } from "react";
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
 export default function Home() {
+
+  const solutionRef = useRef()
+  const productRef = useRef()
+  const contactRef = useRef()
+
 
 
   useEffect(() => {
@@ -46,13 +51,13 @@ export default function Home() {
           className="w-[200px]"
         />
         <div className="flex space-x-10 ">
-          <span className="mt-2 hover:cursor-pointer text-blue-900 font-bold text-xl ">
+          <span onClick={() => {solutionRef.current.scrollIntoView({ behavior: 'smooth' })}} className="mt-2 hover:cursor-pointer text-blue-900 font-bold text-xl ">
             Solution
           </span>
-          <span className="mt-2  hover:cursor-pointer text-blue-900 font-bold text-xl ">
+          <span onClick={() => {productRef.current.scrollIntoView({ behavior: 'smooth' })}} className="mt-2  hover:cursor-pointer text-blue-900 font-bold text-xl ">
             products
           </span>
-          <span className="ring-1 hover:cursor-pointer font-bold text-white text-lg ring-blue-900 bg-blue-900 pt-2 pb-2 pl-8 pr-8 rounded-3xl">
+          <span onClick={() => {contactRef.current.scrollIntoView({ behavior: 'smooth' })}} className="ring-1 hover:cursor-pointer font-bold text-white text-lg ring-blue-900 bg-blue-900 pt-2 pb-2 pl-8 pr-8 rounded-3xl">
             Contact US
           </span>
         </div>
@@ -107,7 +112,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-16 w-screen  items-center">
+        <div ref={solutionRef} className="mt-16 w-screen  items-center">
           <p className="text-4xl  font-bold text-center">AUMNIX AI Solutions</p>
           <p className="mx-auto mt-2 text-center">
             Our platform covers diverse industry use cases and can be leveraged
@@ -196,7 +201,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          <div className="w-screen bg-sky-900">
+          <div ref={productRef} className="w-screen bg-sky-900">
             <div className="mt-12 flex flex-col mx-[20%] space-y-4 pb-36">
               <p className="text-4xl text-white mt-10 ">Our Products</p>
               <p className="text-white">
@@ -233,7 +238,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-screen mb-24 mt-10">
+        <div ref={contactRef} className="w-screen mb-24 mt-10">
           <form data-aos='fade-up' className="mx-[20%] space-y-6">
             <p className="text-4xl mb-4">Contact us</p>
             <div className="flex space-x-6">
