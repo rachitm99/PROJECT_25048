@@ -1,9 +1,34 @@
 import Head from "next/head";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import AOS  from "aos";
+import { useEffect } from "react";
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
 export default function Home() {
+
+
+  useEffect(() => {
+    AOS.init({// Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      
+    
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 900, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom',});
+  },[]);
   return (
     <div className="overflow-clip">
       <Head>
@@ -44,7 +69,14 @@ export default function Home() {
           src="/banner1.svg"
           className=" object-cover h-[600px] w-screen  "
         />
-        <div className="absolute  flex flex-col w-[700px] space-y-2 mt-28 -ml-72">
+        <div data-aos="zoom-in"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center" className="absolute  flex flex-col w-[700px] space-y-2 mt-28 -ml-72">
           <p className="font-bold text-6xl text-blue-800 ">
             Artificial Intillegence at
           </p>
@@ -87,7 +119,8 @@ export default function Home() {
         </div>
         <div className="grid gap-8 grid-cols-3">
           <div>
-            <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-500 transition ease-in delay-150  shadow-2xl  px-[30px]">
+            <div data-aos="fade-right"
+     className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-500 transition ease-in delay-150  shadow-2xl  px-[30px]">
               <img
                 className="mx-auto"
                 src="http://aumnix.com:7993/assets/images/data-engineering.png"
@@ -96,7 +129,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+            <div data-aos='fade-up' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
               <img
                 className="mx-auto"
                 src="http://aumnix.com:7993/assets/images/ai-machine.png"
@@ -105,56 +138,56 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-left' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/automation.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-right' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/bi-implementation.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-up' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/security.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-left' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/smart-city.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-right' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/consultancy.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-up' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/consultancy.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-left' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/consultancy.png"
             />
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
+          <div data-aos='fade-right' className="py-[60px] w-[360px] h-[246px] shadow-slate-300 hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]">
             <img
               className="mx-auto"
               src="http://aumnix.com:7993/assets/images/consultancy.png"
@@ -171,7 +204,17 @@ export default function Home() {
                 leveraged for a host of applications across different verticals.
               </p>
               <div className="grid gap-8 grid-cols-3 ">
-                <div className="p-4 rounded-xl bg-white w-[360px]      ">
+              {/* data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center" */}
+              
+                <div data-aos="fade-up"
+     className="p-4 rounded-xl bg-white w-[360px]      "  >
                   <img
                     className="mx-auto  rounded-xl"
                     src="http://aumnix.com:7993/assets/images/pro-img-1.jpg"
@@ -191,7 +234,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-screen mb-24 mt-10">
-          <form className="mx-[20%] space-y-6">
+          <form data-aos='fade-up' className="mx-[20%] space-y-6">
             <p className="text-4xl mb-4">Contact us</p>
             <div className="flex space-x-6">
               <input
