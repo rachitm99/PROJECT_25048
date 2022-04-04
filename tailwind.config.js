@@ -4,7 +4,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      object:{
+        'photo':'right 75%'
+      }
+    },
   },
   plugins: [],
 }
