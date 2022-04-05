@@ -3,6 +3,16 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import AOS from "aos";
 import { PhoneIcon, LocationMarkerIcon } from "@heroicons/react/outline";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
+import banner from "../public/banner1.svg";
+import logo from "../public/logo.png";
+import dataEngineering from "../public/data-engineering.png"
+import aiMachine from "../public/ai-machine.png"
+import automation from "../public/automation.png"
+import biImplementation from "../public/bi-implementation.png"
+import security from "../public/security.png"
+import smartCity from "../public/smart-city.png"
+import consultancy from "../public/consultancy.png"
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
@@ -10,6 +20,7 @@ export default function Home() {
   const solutionRef = useRef();
   const productRef = useRef();
   const contactRef = useRef();
+
 
   useEffect(() => {
     AOS.init({
@@ -45,10 +56,15 @@ export default function Home() {
       {/* <img className='w-full h-10' src='../public/ff.webm'  ></img> */}
 
       <div className="sticky z-10 top-0 shadow-xl flex items-center bg-white justify-around p-2  w-screen">
-        <img
-          src="http://aumnix.com:7993/assets/images/logo.png"
+        <div className="!w-[200px]">
+
+        <Image
+          src={logo}
+          
           className="w-[200px]"
-        />
+          layout="responsive"
+          />
+          </div>
         <div className="flex space-x-10 ">
           <span
             onClick={() => {
@@ -70,7 +86,7 @@ export default function Home() {
             onClick={() => {
               contactRef.current.scrollIntoView({ behavior: "smooth" });
             }}
-            className="ring-1 hover:cursor-pointer  font-bold text-white md:text-lg text-base ring-blue-900 bg-blue-900 md:pt-2 pt-1 md:pb-2 pb-1 md:pl-8 pl-6 md:pr-8 pr-6 rounded-3xl"
+            className="ring-1 hover:cursor-pointer text-sm font-bold text-white md:text-lg  ring-blue-900 bg-blue-900 md:pt-2 pt-1 md:pb-2 pb-1 md:pl-8 pl-6 md:pr-8 pr-6 rounded-3xl"
           >
             Contact US
           </span>
@@ -84,10 +100,14 @@ export default function Home() {
           <source src='https://assets-global.website-files.com/5e067beb4c88a64e31622d4b/60afbbfd99567275226e2da5_60350557b9c34ba2fc2ee024_Hero-video-transcode-transcode.mp4' type="video/mp4" data-wf-ignore="true" />
           </video>
         </div> */}
-        <img
-          src="/banner1.svg"
-          className="  object-right mt-64 md:mt-0 object-cover h-[600px] sm:h-[600px] w-screen  "
-        />
+        <div className=" !object-cover mr-[800px] md:mr-0 mt-36 md:mt-0  sm:h-[700px]  w-[1900px]  ">
+          <Image
+            loading="eager"
+            layout="responsive"
+            
+            src={banner}
+          />
+        </div>
         <div
           data-aos="zoom-in"
           data-aos-offset="200"
@@ -139,9 +159,7 @@ export default function Home() {
             Our platform covers diverse industry use cases and can be leveraged
             for a host of applications across different verticals
           </p>
-          <p className="mx-auto text-center">
-            
-          </p>
+          <p className="mx-auto text-center"></p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:gap-8 mt-4 md:grid-cols-3">
           <div>
@@ -149,10 +167,13 @@ export default function Home() {
               data-aos="fade-right"
               className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-500 transition ease-in delay-150  shadow-2xl  px-[30px]"
             >
-              <img
-                className="mx-auto"
-                src="http://aumnix.com:7993/assets/images/data-engineering.png"
-              />
+              <div className="mx-auto w-[90px]">
+
+              <Image
+                layout="responsive"
+                src={dataEngineering}
+                />
+                </div>
               <p className="text-center text-3xl">Data Science</p>
             </div>
           </div>
@@ -161,10 +182,14 @@ export default function Home() {
               data-aos="fade-up"
               className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
             >
-              <img
-                className="mx-auto"
-                src="http://aumnix.com:7993/assets/images/ai-machine.png"
-              />
+              <div className="mx-auto w-[90px]">
+
+              <Image
+                
+                layout="responsive"
+                src={aiMachine}
+                />
+                </div>
               <p className="text-center text-3xl">MLOps</p>
             </div>
           </div>
@@ -173,80 +198,109 @@ export default function Home() {
             data-aos="fade-left"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/automation.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image
+              
+              src={automation}
+              layout='responsive'
+              />
+              </div>
             <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
           <div
             data-aos="fade-right"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/bi-implementation.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image
+              
+              src={biImplementation}
+              layout='responsive'
+              />
+              </div>
             <p className="text-center text-3xl">SmartCity</p>
           </div>
           <div
             data-aos="fade-up"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/security.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image
+              
+              src={security}
+              layout='responsive'
+              />
+              </div>
             <p className="text-center text-3xl">Telecommunication</p>
           </div>
           <div
             data-aos="fade-left"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/smart-city.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image
+              
+              src={smartCity}
+              layout="responsive"
+              />
+              </div>
             <p className="text-center text-3xl">Logistics</p>
           </div>
           <div
             data-aos="fade-right"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/consultancy.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image              
+              src={consultancy}
+              layout="responsive"
+              />
+              </div>
             <p className="text-center text-3xl">Healthcare</p>
           </div>
           <div
             data-aos="fade-up"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/consultancy.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image
+              layout="responsive"
+              src={consultancy}
+              />
+              </div>
             <p className="text-center text-3xl">Public Sector</p>
           </div>
           <div
             data-aos="fade-left"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/consultancy.png"
-            />
+            <div className="mx-auto w-[90px]">
+
+            <Image
+              layout="responsive"
+              src={consultancy}
+              />
+              </div>
             <p className="text-center text-3xl">Manufacturing</p>
           </div>
           <div
             data-aos="fade-right"
             className="py-[60px] space-y-4 w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
           >
-            <img
-              className="mx-auto"
-              src="http://aumnix.com:7993/assets/images/consultancy.png"
+            <div className="mx-auto w-[90px]">
+
+            <Image
+            layout="responsive"
+            
+            src={consultancy}
             />
+            </div>
             <p className="text-center text-3xl">Agriculture</p>
           </div>
         </div>
@@ -327,10 +381,13 @@ export default function Home() {
         </div>
         <footer className="w-screen mb-20 ">
           <div className="  md:mx-[16%] flex md:flex-row flex-col space-y-8 md:space-y-0 justify-around space-x-8">
-            <img
-              src="http://aumnix.com:7993/assets/images/logo.png"
-              className="w-[250px] mb-6 md:mb-0 max-h-min object-contain"
-            />
+            <div className="w-[250px] mb-6 md:mb-0 max-h-min object-contain">
+
+            <Image
+              src={logo}
+              
+              />
+              </div>
             <div className="flex space-y-1 flex-col">
               <p className="text-3xl font-bold mb-2">Solution</p>
               <p className="text-gray-500 hover:text-sky-900 hover:font-semibold">
@@ -387,7 +444,6 @@ export default function Home() {
               <div className="flex space-x-3">
                 <PhoneIcon className="h-5 w-5" />
                 <p className="hover:text-gray-900 hover:cursor-pointer">
-                  
                   <a href="tel:1204303655">1204303655</a>
                 </p>
               </div>
