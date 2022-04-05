@@ -4,7 +4,7 @@ import AOS from "aos";
 import { PhoneIcon, LocationMarkerIcon } from "@heroicons/react/outline";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import banner from "../public/banner1.svg";
+import banner from "../public/banner1.png";
 import logo from "../public/logo.png";
 import dataEngineering from "../public/data-engineering.png"
 import aiMachine from "../public/ai-machine.png"
@@ -104,7 +104,7 @@ export default function Home() {
           <Image
             loading="eager"
             layout="responsive"
-            
+            priority={true}
             src={banner}
           />
         </div>
