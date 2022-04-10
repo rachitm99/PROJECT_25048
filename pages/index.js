@@ -13,6 +13,10 @@ import biImplementation from "../public/bi-implementation.png";
 import security from "../public/security.png";
 import smartCity from "../public/smart-city.png";
 import consultancy from "../public/consultancy.png";
+import vision from "../public/vision.jpeg";
+import voice from "../public/voice.png";
+import gemi from "../public/gemi.jpeg";
+import Product from "../components/Product";
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
@@ -103,7 +107,7 @@ export default function Home() {
         </div>
         <div
           data-aos="zoom-in"
-          data-aos-offset="200"
+          // data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
@@ -279,29 +283,12 @@ export default function Home() {
     data-aos-once="false"
     data-aos-anchor-placement="top-center" */}
 
-                <div
-                  data-aos="fade-up"
-                  className="p-4  rounded-xl bg-white w-[500px]      "
-                >
-                  <img
-                    className="mx-auto w-full rounded-xl"
-                    src="http://aumnix.com:7993/assets/images/pro-img-1.jpg"
-                  />
-                  <div className="flex mt-2">
-                    <div className="flex space-y-3 ml-2 flex-col">
-                      <p className=" text-[rgb(16,54,84)] font-bold text-2xl">WhiteEye</p>
-                      <div className="flex">
-                        <p>
-                          State-of-Art anomaly detector to secure system failure
-                          threat.
-                        </p>
-                        <span className="bg-[rgb(16,54,84)] text-white text-base font-bold my-auto p-2 text-center  w-[200px] px-2 rounded-full">
-                          Get Demo
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Product innerStuff={'Digital Vision'} tagLine={'Drishti'} imageTag={vision}/>
+                <Product innerStuff={'Role-based Conversational AI.'} tagLine={'AEKA'} imageTag={voice}/>
+                <Product innerStuff={'Intelligent search engine for government e-marketplace '} tagLine={'GeMi'} imageTag={gemi} />
+                <div className="w-screen">
+            &#8203;
+          </div>
               </div>
             </div>
           </div>
