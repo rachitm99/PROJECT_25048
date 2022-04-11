@@ -97,7 +97,7 @@ export default function Home() {
           <source src='https://assets-global.website-files.com/5e067beb4c88a64e31622d4b/60afbbfd99567275226e2da5_60350557b9c34ba2fc2ee024_Hero-video-transcode-transcode.mp4' type="video/mp4" data-wf-ignore="true" />
           </video>
         </div> */}
-        <div className=" !object-cover mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
+        <div className=" !object-cover ring-0 mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
           <Image
             loading="eager"
             layout="responsive"
@@ -117,10 +117,10 @@ export default function Home() {
           className="absolute mt-10 flex flex-col 2xl:max-w-[700px]  sm:max-w-[450px] md:max-w-[600px]  sm:space-y-2 sm:mt-28 sm:-ml-72"
         >
           <p className="font-bold mx-[20px] text-3xl sm:text-6xl text-[rgb(16,54,84)] ">
-            Artificial Intillegence at
+            Artificial Intillegence at human doorsteps
           </p>
           <p className="font-bold mx-[20px] text-3xl sm:text-6xl text-[rgb(16,54,84)] ">
-            human doorsteps
+            
           </p>
           <p className="mx-[20px] mt-4 text-lg">
             Aumnix is a cluster of deep tech products transforming human
@@ -164,10 +164,10 @@ export default function Home() {
           <p className="mx-auto text-center"></p>
         </div>
 
-        <div className="xl:w-[1900px] ">
+        <div className="xl:w-[1900px] 2xl:w-screen ">
           <div className="bg-blue-200/20 mt-4 xl:ml-72  xl:relative  xl:rounded-br-[220px] xl:rounded-tl-[120px] w-[100%-260px]   h-[100%-115px] ">
-            <div className=" ">
-              <div className="grid bg-transparent  max-w-7xl  xl:mx-[80px] mx-auto text-[rgb(16,54,84)] font-semibold text-sm grid-cols-1 gap-6 md:gap-8 mt-10 md:grid-cols-3  ">
+            <div className="w-full 2xl:flex  ">
+              <div className="grid bg-transparent 2xl:mx-auto max-w-7xl  xl:mx-[80px] mx-auto text-[rgb(16,54,84)] font-semibold text-sm grid-cols-1 gap-6 md:gap-8 mt-10 md:grid-cols-3  ">
                 <div className="">
                   <div
                     data-aos="fade-right"
@@ -263,7 +263,7 @@ export default function Home() {
                   </div>
                   <p className="text-center text-3xl">Agriculture</p>
                 </div>
-                <div className="w-screen">&#8203;</div>
+                <div className="w-screen 2xl:w-full">&#8203;</div>
               </div>
               {/* &#8203; */}
             </div>
