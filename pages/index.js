@@ -5,6 +5,7 @@ import { PhoneIcon, LocationMarkerIcon } from "@heroicons/react/outline";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import banner from "../public/banner1.jpeg";
+import banner1 from "../public/banner.jpg";
 import logo from "../public/logo.png";
 import dataEngineering from "../public/data-engineering.png";
 import aiMachine from "../public/ai-machine.png";
@@ -17,6 +18,7 @@ import vision from "../public/vision.jpeg";
 import voice from "../public/voice.png";
 import gemi from "../public/gemi.jpeg";
 import Product from "../components/Product";
+import bigRobo from "../public/big_robo.svg";
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
@@ -58,7 +60,7 @@ export default function Home() {
       {/* <iframe className='w-full h-10' src="https://giphy.com/embed/l0HlVXQ41386JrK6s" ></iframe> */}
       {/* <img className='w-full h-10' src='../public/ff.webm'  ></img> */}
 
-      <div className="sticky z-10 top-0 shadow-xl flex items-center bg-white justify-around p-2  w-screen">
+      <div className="sticky z-50 top-0 shadow-xl flex items-center bg-white justify-around p-2  w-screen">
         <div className="!w-[200px]">
           <Image src={logo} className="w-[200px]" layout="responsive" />
         </div>
@@ -89,7 +91,7 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <div className="  flex flex-col items-center  bg-white ">
+      <div className="flex flex-col items-center  ">
         {/* <img className=' ' src='http://aumnix.com:7993/assets/images/banner.jpg' />
         <div className=' absolute  block  '>
         
@@ -97,15 +99,41 @@ export default function Home() {
           <source src='https://assets-global.website-files.com/5e067beb4c88a64e31622d4b/60afbbfd99567275226e2da5_60350557b9c34ba2fc2ee024_Hero-video-transcode-transcode.mp4' type="video/mp4" data-wf-ignore="true" />
           </video>
         </div> */}
-        <div className=" !object-cover mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
+        {/* <div className=" !object-cover mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
           <Image
             loading="eager"
             layout="responsive"
             priority={true}
-            src={banner}
+            src={banner1}
           />
+        </div> */}
+        <div className="w-screen flex  items-center h-[500px]  bg-[url('../public/banner.jpg')] bg-center bg-cover">
+        
+        <div className="flex     mx-[5px] md:mx-[30px] lg:mx-auto   ">
+        <div 
+        data-aos="zoom-in"
+        // data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+        className="flex flex-col max-w-[900px]  ">
+          <p className="font-bold mx-[20px] text-3xl  sm:text-6xl text-[rgb(16,54,84)] max-w-[700px] ">
+            Artificial Intillegence at human doorsteps
+          </p>
+          <p className="font-bold mx-[20px] text-3xl sm:text-6xl text-[rgb(16,54,84)] max-w-[700px] ">
+            
+          </p>
+          <p className="mx-[20px] mt-4 text-lg max-w-[800px]">
+            Aumnix is a cluster of deep tech products transforming human
+            experiences and industry outcomes by building AI algorithms on
+            video, voice, and sensor data, for edge devices by providing a
+            decentralized AI-as-a-Service.
+          </p>
         </div>
-        <div
+        {/* <div
           data-aos="zoom-in"
           // data-aos-offset="200"
           data-aos-delay="50"
@@ -114,13 +142,13 @@ export default function Home() {
           data-aos-mirror="true"
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
-          className="absolute mt-10 flex flex-col 2xl:max-w-[700px]  sm:max-w-[450px] md:max-w-[600px]  sm:space-y-2 sm:mt-28 sm:-ml-72"
-        >
+          className="flex flex-col 2xl:max-w-[700px]  sm:max-w-[450px] md:max-w-[600px]  sm:space-y-2 sm:mt-28 sm:-ml-72"
+          >
           <p className="font-bold mx-[20px] text-3xl sm:text-6xl text-[rgb(16,54,84)] ">
-            Artificial Intillegence at
+            Artificial Intillegence at human doorsteps
           </p>
           <p className="font-bold mx-[20px] text-3xl sm:text-6xl text-[rgb(16,54,84)] ">
-            human doorsteps
+            
           </p>
           <p className="mx-[20px] mt-4 text-lg">
             Aumnix is a cluster of deep tech products transforming human
@@ -128,7 +156,12 @@ export default function Home() {
             video, voice, and sensor data, for edge devices by providing a
             decentralized AI-as-a-Service.
           </p>
+        </div> */}
+        <div className="h-24 ">
+          <Image src={bigRobo} className=' ' />
         </div>
+            </div>
+          </div>
         {/* <picture className=' h-[500px] ml-auto w-full' >
             <source src='/banner1.svg' className='w-[200px]' />
           </picture> */}
