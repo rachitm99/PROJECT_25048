@@ -17,10 +17,12 @@ import vision from "../public/vision.jpeg";
 import voice from "../public/voice.png";
 import gemi from "../public/gemi.jpeg";
 import Product from "../components/Product";
+import { useRouter } from 'next/router'
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
 export default function Home() {
+  const router = useRouter()
   const solutionRef = useRef();
   const productRef = useRef();
   const contactRef = useRef();
@@ -47,6 +49,12 @@ export default function Home() {
       anchorPlacement: "top-bottom",
     });
   }, []);
+  const go_gemi = e => {
+    e.preventDefault();
+
+    router.push('http://aumnix.com:7997');
+
+  }
   return (
     <div className="overflow-clip">
       <Head>
@@ -295,16 +303,19 @@ export default function Home() {
     data-aos-anchor-placement="top-center" */}
 
                 <Product
+                someLink={() => {'/'}}
                   innerStuff={"Digital Vision"}
                   tagLine={"Drishti"}
                   imageTag={vision}
                 />
                 <Product
+                someLink={() => {'/'}}
                   innerStuff={"Role-based Conversational AI."}
                   tagLine={"AEKA"}
                   imageTag={voice}
                 />
                 <Product
+                someLink={go_gemi}
                   innerStuff={
                     "Intelligent search engine for government e-marketplace "
                   }

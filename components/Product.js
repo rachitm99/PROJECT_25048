@@ -2,7 +2,7 @@ import AOS from "aos";
 import Image from "next/image";
 import { useEffect } from "react";
 
-function Product({innerStuff,tagLine ,imageTag}) {
+function Product({innerStuff,tagLine ,imageTag , someLink}) {
 
     useEffect(() => {
         AOS.init({
@@ -43,7 +43,7 @@ function Product({innerStuff,tagLine ,imageTag}) {
                         <p className="min-w-[60%] ">
                           {innerStuff}
                         </p>
-                        <span className="bg-[rgb(16,54,84)] text-white text-base font-bold my-auto p-2 text-center  w-[200px] px-2 rounded-full">
+                        <span onClick={someLink} className="bg-[rgb(16,54,84)] hover:cursor-pointer text-white text-base font-bold my-auto p-2 text-center  w-[200px] px-2 rounded-full">
                           Get Demo
                         </span>
                       </div>
