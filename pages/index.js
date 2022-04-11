@@ -58,7 +58,7 @@ export default function Home() {
       {/* <iframe className='w-full h-10' src="https://giphy.com/embed/l0HlVXQ41386JrK6s" ></iframe> */}
       {/* <img className='w-full h-10' src='../public/ff.webm'  ></img> */}
 
-      <div className="sticky z-10 top-0 shadow-xl flex items-center bg-white justify-around p-2  w-screen">
+      <div className="sticky z-50 top-0 shadow-xl flex items-center bg-white justify-around p-2  w-screen">
         <div className="!w-[200px]">
           <Image src={logo} className="w-[200px]" layout="responsive" />
         </div>
@@ -135,7 +135,7 @@ export default function Home() {
 
         {/* </div> */}
         <div data-aos="fade-up" className="w-screen">
-          <div className=" mt-8 sm:bg-blue-200/20 w-[100%-260px] sm:mr-40 sm:rounded-tr-full  sm:rounded-bl-full ">
+          <div className=" mt-8 sm:bg-blue-200/20 w-[100%-260px] sm:mr-64 sm:rounded-tr-full  sm:rounded-bl-full ">
             <div className="flex pt-2 !mx-auto w-screen  space-y-4 md:w-[1100px] flex-col">
               <p className="text-4xl  text-[rgb(16,54,84)] mx-[20px] md:mx-[50px] font-bold">
                 What is AUMNIX?
@@ -149,6 +149,9 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <div className="sm:bg-blue-200/20 absolute right-0 left-auto rounded-bl-full rounded-tr-full h-[75px] w-[250px]">
+            &#8203;
+          </div>
         </div>
         <div ref={solutionRef} className="mt-16 w-screen  items-center">
           <p className="text-2xl  sm:text-4xl  font-bold text-center">
@@ -160,111 +163,119 @@ export default function Home() {
           </p>
           <p className="mx-auto text-center"></p>
         </div>
-        <div className="grid max-w-7xl text-[rgb(16,54,84)] font-semibold text-sm grid-cols-1 gap-6 md:gap-8 mt-4 md:grid-cols-3  mx-4">
-          <div>
-            <div
-              data-aos="fade-right"
-              className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-500 transition ease-in delay-150  shadow-2xl  px-[30px]"
-            >
-              <div className="mx-auto w-[90px]">
-                <Image layout="responsive" src={dataEngineering} />
-              </div>
-              <p className="text-center text-3xl">Data Science</p>
-            </div>
-          </div>
-          <div>
-            <div
-              data-aos="fade-up"
-              className="py-[60px] space-y-4 md:max-w-[360px]  h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-            >
-              <div className="mx-auto w-[90px]">
-                <Image layout="responsive" src={aiMachine} />
-              </div>
-              <p className="text-center text-3xl">MLOps</p>
-            </div>
-          </div>
 
-          <div
-            data-aos="fade-left"
-            className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image src={automation} layout="responsive" />
+        <div className="xl:w-[1900px] ">
+          <div className="bg-blue-200/20 mt-4 xl:ml-72  xl:relative  xl:rounded-br-[220px] xl:rounded-tl-[120px] w-[100%-260px]   h-[100%-115px] ">
+            <div className=" ">
+              <div className="grid bg-transparent  max-w-7xl  xl:mx-[80px] mx-auto text-[rgb(16,54,84)] font-semibold text-sm grid-cols-1 gap-6 md:gap-8 mt-10 md:grid-cols-3  ">
+                <div className="">
+                  <div
+                    data-aos="fade-right"
+                    className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-500 transition ease-in delay-150  shadow-2xl  px-[30px]"
+                  >
+                    <div className="mx-auto w-[90px]">
+                      <Image layout="responsive" src={dataEngineering} />
+                    </div>
+                    <p className="text-center text-3xl">Data Science</p>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    data-aos="fade-up"
+                    className="py-[60px] bg-white space-y-4 md:max-w-[360px]  h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                  >
+                    <div className="mx-auto w-[90px]">
+                      <Image layout="responsive" src={aiMachine} />
+                    </div>
+                    <p className="text-center text-3xl">MLOps</p>
+                  </div>
+                </div>
+
+                <div
+                  data-aos="fade-left"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image src={automation} layout="responsive" />
+                  </div>
+                  <p className="text-center text-3xl">AI-as-a-Service</p>
+                </div>
+                <div
+                  data-aos="fade-right"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image src={biImplementation} layout="responsive" />
+                  </div>
+                  <p className="text-center text-3xl">SmartCity</p>
+                </div>
+                <div
+                  data-aos="fade-up"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image src={security} layout="responsive" />
+                  </div>
+                  <p className="text-center text-3xl">Telecommunication</p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image src={smartCity} layout="responsive" />
+                  </div>
+                  <p className="text-center text-3xl">Logistics</p>
+                </div>
+                <div
+                  data-aos="fade-right"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image src={consultancy} layout="responsive" />
+                  </div>
+                  <p className="text-center text-3xl">Healthcare</p>
+                </div>
+                <div
+                  data-aos="fade-up"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image layout="responsive" src={consultancy} />
+                  </div>
+                  <p className="text-center text-3xl">Public Sector</p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  className="py-[60px] bg-white space-y-4 md:max-w-[360px]  h-[246px] shadow-slate-600 md:shadow-slate-300 sm:hover:shadow-slate-500 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image layout="responsive" src={consultancy} />
+                  </div>
+                  <p className="text-center text-3xl">Manufacturing</p>
+                </div>
+                <div
+                  data-aos="fade-right"
+                  className="py-[60px] bg-white space-y-4  md:max-w-[360px]  h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
+                >
+                  <div className="mx-auto w-[90px]">
+                    <Image layout="responsive" src={consultancy} />
+                  </div>
+                  <p className="text-center text-3xl">Agriculture</p>
+                </div>
+                <div className="w-screen">&#8203;</div>
+              </div>
+              {/* &#8203; */}
             </div>
-            <p className="text-center text-3xl">AI-as-a-Service</p>
           </div>
-          <div
-            data-aos="fade-right"
-            className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image src={biImplementation} layout="responsive" />
-            </div>
-            <p className="text-center text-3xl">SmartCity</p>
-          </div>
-          <div
-            data-aos="fade-up"
-            className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image src={security} layout="responsive" />
-            </div>
-            <p className="text-center text-3xl">Telecommunication</p>
-          </div>
-          <div
-            data-aos="fade-left"
-            className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image src={smartCity} layout="responsive" />
-            </div>
-            <p className="text-center text-3xl">Logistics</p>
-          </div>
-          <div
-            data-aos="fade-right"
-            className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image src={consultancy} layout="responsive" />
-            </div>
-            <p className="text-center text-3xl">Healthcare</p>
-          </div>
-          <div
-            data-aos="fade-up"
-            className="py-[60px] space-y-4 md:max-w-[360px] h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image layout="responsive" src={consultancy} />
-            </div>
-            <p className="text-center text-3xl">Public Sector</p>
-          </div>
-          <div
-            data-aos="fade-left"
-            className="py-[60px] space-y-4 md:max-w-[360px]  h-[246px] shadow-slate-600 md:shadow-slate-300 sm:hover:shadow-slate-500 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image layout="responsive" src={consultancy} />
-            </div>
-            <p className="text-center text-3xl">Manufacturing</p>
-          </div>
-          <div
-            data-aos="fade-right"
-            className="py-[60px] space-y-4  md:max-w-[360px]  h-[246px] shadow-slate-600 md:shadow-slate-300 md:hover:shadow-slate-400 transition ease-in-out delay-200 shadow-2xl  px-[30px]"
-          >
-            <div className="mx-auto w-[90px]">
-              <Image layout="responsive" src={consultancy} />
-            </div>
-            <p className="text-center text-3xl">Agriculture</p>
-          </div>
-          <div className="w-screen">
+        <div className="sm:bg-blue-200/20  right-auto left-0 rounded-tl-full rounded-br-full h-[100px] w-[290px]">
             &#8203;
           </div>
+          {/* </div> */}
         </div>
+
         <div>
-          <div
-            ref={productRef}
-            className="w-screen bg-[rgb(16,54,84)] "
-          >
+          <div ref={productRef} className="w-screen bg-[rgb(16,54,84)] ">
             <div className="mt-12 flex flex-col mx-auto  max-w-6xl space-y-4 px-2 pb-36">
               <p className="text-4xl font-bold text-white mt-10 mx-4 max-w-6xl">
                 Our Products
@@ -283,18 +294,33 @@ export default function Home() {
     data-aos-once="false"
     data-aos-anchor-placement="top-center" */}
 
-                <Product innerStuff={'Digital Vision'} tagLine={'Drishti'} imageTag={vision}/>
-                <Product innerStuff={'Role-based Conversational AI.'} tagLine={'AEKA'} imageTag={voice}/>
-                <Product innerStuff={'Intelligent search engine for government e-marketplace '} tagLine={'GeMi'} imageTag={gemi} />
-                <div className="w-screen">
-            &#8203;
-          </div>
+                <Product
+                  innerStuff={"Digital Vision"}
+                  tagLine={"Drishti"}
+                  imageTag={vision}
+                />
+                <Product
+                  innerStuff={"Role-based Conversational AI."}
+                  tagLine={"AEKA"}
+                  imageTag={voice}
+                />
+                <Product
+                  innerStuff={
+                    "Intelligent search engine for government e-marketplace "
+                  }
+                  tagLine={"GeMi"}
+                  imageTag={gemi}
+                />
+                <div className="w-screen">&#8203;</div>
               </div>
             </div>
           </div>
         </div>
         <div ref={contactRef} className="w-screen  mb-24 mt-10">
-          <form data-aos="fade-up" className="mx-[20px] lg:mx-auto   max-w-6xl  space-y-6">
+          <form
+            data-aos="fade-up"
+            className="mx-[20px] lg:mx-auto   max-w-6xl  space-y-6"
+          >
             <p className="text-4xl mb-4">Contact us</p>
             <div className="flex md:flex-row flex-col md:space-y-0 space-y-6 md:space-x-6">
               <input
