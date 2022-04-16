@@ -2,7 +2,7 @@ import Head from "next/head";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import AOS from "aos";
 import { PhoneIcon, LocationMarkerIcon } from "@heroicons/react/outline";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef ,useState } from "react";
 import Image from "next/image";
 import banner from "../public/banner1.jpeg";
 import logo from "../public/logo.png";
@@ -17,15 +17,31 @@ import vision from "../public/vision.jpeg";
 import voice from "../public/voice.png";
 import gemi from "../public/gemi.jpeg";
 import Product from "../components/Product";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import axios from "../components/Axios";
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
 export default function Home() {
+  const [name , setName] = useState()
+  const [email , setEmail] = useState('')
+  const [phno , setPhno] = useState(0)
+  const [msg , setMsg]= useState('')
   const router = useRouter()
   const solutionRef = useRef();
   const productRef = useRef();
   const contactRef = useRef();
+  
+  const go_post = async ()  => {
+    
+    const req = await axios.post('/',{"name" : name, "email": email,"phno":phno,"message":msg});
+    setName('')
+    setEmail('')
+    setPhno(0)
+    setMsg(0)
+    // console.log(req);
+    // console.log('hlo');
+  }
 
   useEffect(() => {
     AOS.init({
@@ -52,7 +68,7 @@ export default function Home() {
   const go_gemi = e => {
     e.preventDefault();
 
-    router.push('http://aumnix.com:7997');
+    router.push('http://62.171.143.248:7997');
 
   }
   return (
@@ -175,7 +191,7 @@ export default function Home() {
         <div className="xl:w-[1900px] 2xl:w-screen ">
           <div className="bg-blue-200/20 mt-4 xl:ml-72  xl:relative  xl:rounded-br-[220px] xl:rounded-tl-[120px] w-[100%-260px]   h-[100%-115px] ">
             <div className="w-full 2xl:flex  ">
-              <div className="grid bg-transparent 2xl:mx-auto max-w-7xl  xl:mx-[80px] mx-auto text-[rgb(16,54,84)] font-semibold text-sm grid-cols-1 gap-6 md:gap-8 mt-10 md:grid-cols-3  ">
+              <div className="grid bg-transparent 2xl:mx-auto 2xl:pr-60 max-w-7xl  xl:mx-[80px] mx-auto text-[rgb(16,54,84)] font-semibold text-sm grid-cols-1 gap-6 md:gap-8 mt-10 md:grid-cols-3  ">
                 <div className="">
                   <div
                     data-aos="fade-right"
@@ -331,37 +347,43 @@ export default function Home() {
           <form
             data-aos="fade-up"
             className="mx-[20px] lg:mx-auto   max-w-6xl  space-y-6"
+
           >
             <p className="text-4xl mb-4">Contact us</p>
             <div className="flex md:flex-row flex-col md:space-y-0 space-y-6 md:space-x-6">
               <input
                 className="ring-1 focus:outline-none flex-grow px-4 py-2 ring-gray-400 rounded-lg"
                 placeholder="Full Name"
+                onChange={(e) => {setName(e.target.value)}}
+
               />
               <input
                 className="ring-1 focus:outline-none flex-grow px-4 py-2 ring-gray-400 rounded-lg"
                 placeholder="E-mail"
+                onChange={(e) => {setEmail(e.target.value)}}
               />
             </div>
             <div className="flex space-x-6">
               <div className="ring-1 flex hover:cursor-pointer px-4 py-2 ring-gray-400 rounded-lg">
-                +91 <ChevronDownIcon className="h-5 mt-1 ml-1" />{" "}
+                +91 <ChevronDownIcon className="h-5 mt-1 ml-1" />
               </div>
               <input
                 className="ring-1 focus:outline-none flex-grow w-full md:max-w-[40%] px-4 py-2 ring-gray-400 rounded-lg"
                 placeholder="98765 43210"
+                onChange={(e) => {setPhno(e.target.value)}}
               />
             </div>
             <div className="flex">
               <textarea
                 className="w-60 h-40 focus:outline-none ring-1 flex-grow px-4 py-2 ring-gray-400 rounded-lg"
                 placeholder="Message"
+                onChange={(e) => {setMsg(e.target.value)}}
               />
             </div>
-            <div className="flex items-center">
-              <button className="bg-sky-900 mx-auto text-white text-2xl rounded-full  px-10 py-2 ">
+            <div className="flex hover:cursor-pointer items-center">
+              <div onClick={go_post} className="bg-sky-900 mx-auto text-white text-2xl rounded-full  px-10 py-2 ">
                 Submit
-              </button>
+              </div>
             </div>
           </form>
         </div>
