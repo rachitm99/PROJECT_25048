@@ -4,7 +4,7 @@ import AOS from "aos";
 import { PhoneIcon, LocationMarkerIcon } from "@heroicons/react/outline";
 import { useEffect, useRef ,useState } from "react";
 import Image from "next/image";
-import banner from "../public/banner1.jpeg";
+import banner from "../public/new-banner-01.jpg";
 import logo from "../public/logo.png";
 import dataEngineering from "../public/data-engineering.png";
 import aiMachine from "../public/ai-machine.png";
@@ -19,6 +19,7 @@ import gemi from "../public/gemi.jpeg";
 import Product from "../components/Product";
 import { useRouter } from 'next/router';
 import axios from "../components/Axios";
+import Slider from "../components/Slider";
 // import banner from '../public/ff.webm'
 // import banner from '../public/banner1.svg'
 
@@ -121,15 +122,10 @@ export default function Home() {
           <source src='https://assets-global.website-files.com/5e067beb4c88a64e31622d4b/60afbbfd99567275226e2da5_60350557b9c34ba2fc2ee024_Hero-video-transcode-transcode.mp4' type="video/mp4" data-wf-ignore="true" />
           </video>
         </div> */}
-        <div className=" !object-cover ring-0 mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
-          <Image
-            loading="eager"
-            layout="responsive"
-            priority={true}
-            src={banner}
-          />
+        <div className=" object-contain ring-0 mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
+          <Slider/>
         </div>
-        <div
+        {/* <div
           data-aos="zoom-in"
           // data-aos-offset="200"
           data-aos-delay="50"
@@ -152,7 +148,7 @@ export default function Home() {
             video, voice, and sensor data, for edge devices by providing a
             decentralized AI-as-a-Service.
           </p>
-        </div>
+        </div> */}
         {/* <picture className=' h-[500px] ml-auto w-full' >
             <source src='/banner1.svg' className='w-[200px]' />
           </picture> */}
