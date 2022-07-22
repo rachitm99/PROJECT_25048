@@ -33,7 +33,8 @@ function Slider() {
             className="transition ease-in-out duration-1000 scale-105"
               loading="eager"
               alt="banner"
-              // layout="fill"
+              objectFit="contain"
+              layout="fill"
               priority={true}
               src={slide}
               />
