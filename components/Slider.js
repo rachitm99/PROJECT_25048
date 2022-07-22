@@ -27,10 +27,10 @@ function Slider() {
         return (
           <div className={index != current ? "hidden" : ""} key={index}>
             {/* {console.log(index)} */}
-            <div >
+            <div className="">
 
             <Image
-            className="transition ease-in-out duration-1000 scale-105"
+            className="transition -translate-y-64  sm:-translate-y-48 md:-translate-y-36 xl:-translate-y-0  ease-in-out duration-1000 scale-105"
               loading="eager"
               alt="banner"
               objectFit="contain"

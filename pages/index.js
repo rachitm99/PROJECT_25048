@@ -57,7 +57,7 @@ export default function Home() {
       throttleDelay: 10, // the delay on throttle used while scrolling the page (advanced)
 
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
+      offset: 50, // offset (in px) from the original trigger point
       delay: 0, // values from 0 to 3000, with step 50ms
       duration: 900, // values from 0 to 3000, with step 50ms
       easing: "ease", // default easing for AOS animations
@@ -155,7 +155,7 @@ export default function Home() {
 
         {/* </div> */}
         <div data-aos="fade-up" className="w-screen">
-          <div className=" mt-8 sm:bg-blue-200/20 w-[100%-260px] sm:mr-64 sm:rounded-tr-full  sm:rounded-bl-full ">
+          <div className=" mt-20 sm:-mt-80 md:-mt-56 xl:-mt-0 sm:bg-blue-200/20 w-[100%-260px] sm:mr-64 sm:rounded-tr-full  sm:rounded-bl-full ">
             <div className="flex pt-2 !mx-auto w-screen  space-y-4 md:w-[1100px] flex-col">
               <p className="text-4xl  text-[rgb(16,54,84)] mx-[20px] md:mx-[50px] font-bold">
                 What is AUMNIX?
