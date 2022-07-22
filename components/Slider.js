@@ -30,7 +30,7 @@ function Slider() {
             <div className="">
 
             <Image
-            className="transition -translate-y-64  sm:-translate-y-48 md:-translate-y-36 xl:-translate-y-0  ease-in-out duration-1000 scale-105"
+            className="transition -translate-y-64  sm:-translate-y-48 md:-translate-y-36 lg:-translate-y-24 xl:-translate-y-0  ease-in-out duration-1000 scale-105"
               loading="eager"
               alt="banner"
               objectFit="contain"
