@@ -57,8 +57,8 @@ export default function Home() {
       throttleDelay: 10, // the delay on throttle used while scrolling the page (advanced)
 
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: -20, // offset (in px) from the original trigger point
-      delay: 0, // values from 0 to 3000, with step 50ms
+      offset: 10, // offset (in px) from the original trigger point
+      delay: 100, // values from 0 to 3000, with step 50ms
       duration: 900, // values from 0 to 3000, with step 50ms
       easing: "ease", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down
@@ -122,8 +122,12 @@ export default function Home() {
           <source src='https://assets-global.website-files.com/5e067beb4c88a64e31622d4b/60afbbfd99567275226e2da5_60350557b9c34ba2fc2ee024_Hero-video-transcode-transcode.mp4' type="video/mp4" data-wf-ignore="true" />
           </video>
         </div> */}
-        <div className=" object-contain ring-0 mr-[800px] sm:mr-0 mt-36 sm:mt-0  sm:h-[700px]  w-[1900px]  ">
+        {/* <div className="  ring-0 mr-[800px] sm:mr-0 mt-36 sm:mt-0 h-[300px]  sm:h-[700px] md:h-[1000px]  max-w-[1900px]  ">
           <Slider/>
+        </div> */}
+        <div className="max-w-[1700px] ">
+
+        <Slider/>
         </div>
         {/* <div
           data-aos="zoom-in"
@@ -316,7 +320,7 @@ export default function Home() {
 
                 <Product
                 someLink={() => {'/'}}
-                  innerStuff={"Digital Vision"}
+                  innerStuff={"Digital AI Vision solutions "}
                   tagLine={"Drishti"}
                   imageTag={vision}
                 />

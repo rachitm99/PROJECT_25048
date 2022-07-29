@@ -36,14 +36,14 @@ function Product({innerStuff,tagLine ,imageTag , someLink}) {
                     className="mx-auto w-full rounded-xl"
                     src={imageTag}
                   />
-                  <div className="flex mt-2">
-                    <div className="flex space-y-3 ml-2 flex-col">
+                  <div className="flex mt-2 ">
+                    <div className="flex space-y-3  ml-2 flex-col">
                       <p className=" text-[rgb(16,54,84)] font-bold text-2xl">{tagLine}</p>
-                      <div className="flex">
-                        <p className="min-w-[60%] ">
-                          {innerStuff}
+                      <div className="flex w-[70vw] space-x-10 ">
+                        <p className="w-[200px] ">
+                          {innerStuff} 
                         </p>
-                        <span onClick={someLink} className="bg-[rgb(16,54,84)] hover:cursor-pointer text-white text-base font-bold my-auto p-2 text-center  w-[200px] px-2 rounded-full">
+                        <span onClick={someLink} className="bg-[rgb(16,54,84)] hover:cursor-pointer text-white text-base font-bold my-auto  p-2 text-center  w-[200px] rounded-full">
                           Get Demo
                         </span>
                       </div>
